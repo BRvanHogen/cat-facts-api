@@ -1,0 +1,16 @@
+p {
+  font-family: 'kaushan_script', serif;
+  display: flex;
+  justify-content: center;
+}
+
+.button-container {
+  border: solid 1px red;
+  margin: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  padding: 5px;
+}

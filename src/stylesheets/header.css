@@ -1,0 +1,20 @@
+.header {
+    margin: 5px;
+    padding: 0;
+    border: solid 1px blue;
+}
+
+.header h1 {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+}

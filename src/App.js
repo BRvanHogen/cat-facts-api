@@ -1,7 +1,10 @@
-import './App.css';
+import './stylesheets/App.css';
+import './fonts/fonts.css';
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
-import Cat from "./components/Cat";
+import {BrowserRouter as Router, Switch, Route,} from "react-router-dom";
+import Header from "./components/Header";
+import About from "./components/About";
 
 
 
@@ -27,9 +30,16 @@ function App() {
 
 
     return (
-        <>
-            <h1>First Cat App Ever</h1>
+        <Router>
+            <Header/>
+            <Switch>
+                <Route path="/about">
+                    <About/>
+                </Route>
+                <Route exact path="/">
             <p>{catFact}</p>
+
+                    <div className="button-container">
             <button
                 type="button"
                 disabled={number === 0}
@@ -44,7 +54,10 @@ function App() {
             >
                 next fact
             </button>
-        </>
+                </div>
+                </Route>
+            </Switch>
+        </Router>
         );
 }
 
